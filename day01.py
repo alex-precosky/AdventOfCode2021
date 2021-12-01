@@ -1,6 +1,6 @@
 from typing import List
 
-def count_successive_depth_increases(depths: List[int]):
+def count_successive_depth_increases(depths: List[int]) -> int:
     successive_depth_increases = 0
 
     for i in range(len(depths) - 1):
@@ -10,7 +10,7 @@ def count_successive_depth_increases(depths: List[int]):
     return successive_depth_increases
 
 
-def count_successive_3_window_depth_increases(depths: List[int]):
+def count_successive_3_window_depth_increases(depths: List[int]) -> int:
     successive_depth_increases = 0
 
     for i in range(len(depths) - 3):
