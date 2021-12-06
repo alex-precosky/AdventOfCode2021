@@ -1,6 +1,5 @@
 # Many fish will have the same timer value... so keep a count of what fish have what timer
-
-# [[count=3, timer = 10], [count=1, timer=12]}
+# A list of named tuples will hold this info: [[count=3, timer = 10], [count=1, timer=12]}
 
 from collections import namedtuple
 from typing import List
@@ -14,13 +13,6 @@ def parse_fish_str(fish_str: str) -> List[FishRecord]:
     timers = [int(timer_str) for timer_str in fish_str.split(',')]
 
     fish_list = []
-
-    # while len(timers) != 0:
-    #     first_timer = timers[0]
-    #     fish_list.append(FishRecord(count = timers.count(first_timer), timer = first_timer))
-    #     for item in timers:
-    #         if item == first_timer:
-    #             timers.remove(item)
 
     for timer in timers:
         fish_list = add_or_insert_fish(fish_list, count=1, timer=timer)
